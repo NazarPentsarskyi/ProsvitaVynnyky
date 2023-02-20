@@ -1,0 +1,12 @@
+{
+  "name": "prosvita_01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm start --prefix client",
+    "server": "npm start nodemon index.js --prefix server"
+  },
+  "author": "",
+  "license": "ISC"
+}
