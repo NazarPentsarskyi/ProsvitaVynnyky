@@ -43,7 +43,7 @@ export const CreateNews = () => {
         <textarea type='text' 
           placeholder='Description...'
           onChange={(event) => {setDescription(event.target.value)}}
-          />
+        />
         <Editor className='quill' value={content} onChange={setContent} />
         <button onClick={createArticle}>Create News</button>
       </div>

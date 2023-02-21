@@ -37,7 +37,6 @@
 .links a {
   text-decoration: none;
   color: black;
-  
 }
 
 .dropdown-menu.active {
@@ -70,6 +69,6 @@
 }
 
 .dropdown-menu-under.inactive {
-  transform: translateY(-250px);
+  transform: translateY(-240px);
   transition: all 0.3s ease;
 }

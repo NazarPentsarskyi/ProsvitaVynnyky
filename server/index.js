@@ -23,7 +23,7 @@ app.get('/getArticles', async (req, res) => {
   );
 });
 
-app.get('/postpage/:id', async (req, res) => {
+app.get('/articlepage/:id', async (req, res) => {
   const {id} = req.params;
   const articleDoc = await ArticleModel.findById(id);
   res.json(articleDoc);

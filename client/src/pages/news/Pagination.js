@@ -1,10 +1,9 @@
 import React from 'react';
 
-
-export const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
+export const Pagination = ({ articlesPerPage, totalArticles, paginate }) => {
   const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalPosts / postsPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalArticles / articlesPerPage); i++) {
     pageNumbers.push(i);
   }
 
