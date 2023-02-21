@@ -30,38 +30,6 @@
   margin: 0 auto;    
 }
 
-.navbar {
-  grid-column: 1;
-  grid-row: 2;
-  padding: 20px;
-  border: 1px solid grey;
-  min-height: 100vh;
-}
-
-.links {
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.link {
-  padding: 6px 10px;
-  margin: 10px 0;
-  display: block;
-  border-bottom: 1px solid #9f9a9a;
-}
-
-.link .create {
-  row-gap: 50px;
-}
-
-.links a {
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
-}
-
 .main {
   grid-column: 2 / span 4;
   grid-row: 2;  
@@ -165,7 +133,6 @@ button:hover {
 
 .page-item {
   width: 100px;
-  padding: 5px;
 	border: 5px solid transparent;
 	border-radius: 5px;
 	font-size: 16px;

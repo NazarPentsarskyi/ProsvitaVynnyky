@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 const PORT = 3001;
-const db  = 'mongodb+srv://ProsvitaAdmin:ProsvitaAdminV1@cluster0.iweyqr6.mongodb.net/ProsvitaDBV1?retryWrites=true&w=majority';
+const db  = 'mongodb+srv://ProsvitaVynnyky:Prosvita_1868_Vynnyky@cluster0.xm2knup.mongodb.net/ProsvitaDB?retryWrites=true&w=majority';
 
 mongoose
 .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
