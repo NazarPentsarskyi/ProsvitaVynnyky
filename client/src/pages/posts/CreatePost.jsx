@@ -5,23 +5,20 @@ import Axios from 'axios';
 import Editor from "../../general/Editor";
 import 'react-quill/dist/quill.snow.css';
 
-export const CreateNews = () => {
+export const CreatePost = () => {
   
   const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
   const [content, setContent] = useState('');
   const [redirect, setRedirect] = useState(false);
 
-  async function createArticle(event) {
+  async function createPost(event) {
     const data = new FormData();
     data.set('title', title);
-    data.set('description', description);
     data.set('content', content);
     event.preventDefault();
 
-    await Axios.post('http://localhost:3001/createArticle', {
+    await Axios.post('http://localhost:3001/createPost', {
       title,
-      description,
       content,
     })
     .then((response) => {
@@ -30,22 +27,18 @@ export const CreateNews = () => {
   }
 
   if (redirect) {
-    return <Navigate to="/" />
+    return <Navigate to="/postspage" />
   }
   
   return (
-    <form onSubmit={createArticle}>
+    <form onSubmit={createPost}>
       <div className='form'>
         <textarea type='text' 
           placeholder='Title...' 
           onChange={(event) => {setTitle(event.target.value)}}
         />
-        <textarea type='text' 
-          placeholder='Description...'
-          onChange={(event) => {setDescription(event.target.value)}}
-        />
         <Editor className='quill' value={content} onChange={setContent} />
-        <button onClick={createArticle}>Create News</button>
+        <button onClick={createPost}>Create Post</button>
       </div>
     </form>
   )

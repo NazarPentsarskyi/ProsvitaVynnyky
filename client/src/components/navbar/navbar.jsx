@@ -24,10 +24,11 @@ export const Navbar = () => {
           <div className='link'><Link to="/participation"> Участь у нарадах і заходах </Link></div>
           <div className='link'><Link to="/periodicals"> Періодика </Link></div>
           <div className='link'><Link to="/projects"> Проекти </Link></div>
-          <div className='link'><Link to="/posts"> Статті та дописи </Link></div>
+          <div className='link'><Link to="/postspage"> Статті та дописи </Link></div>
           <div className='link'><Link to="/gallery"> Фотогалерея </Link></div>
         </div>
         <div className='link create'><Link to="/createnews"> Написати статтю </Link></div>
+        <div className='link create'><Link to="/createpost"> Написати допис </Link></div>
       </div>
     </div>
   )

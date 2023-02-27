@@ -12,10 +12,12 @@ import { Government } from "./pages/management/government/government";
 import { Participation } from "./pages/participation/participation";
 import { Periodicals } from "./pages/periodicals/periodicals";
 import { Projects } from "./pages/projects/projects";
-import { Posts } from "./pages/posts/posts";
+import { PostsPage } from "./pages/posts/PostsPage";
 import { Gallery } from "./pages/gallery/gallery";
 import { ArticlePage } from './pages/news/ArticlePage';
+import { PostPage } from "./pages/posts/PostPage";
 import { CreateNews } from './pages/news/CreateNews';
+import { CreatePost } from './pages/posts/CreatePost';
 import { Contacts } from "./components/contacts/contacts";
 import { Footer } from "./components/footer/footer";
 
@@ -38,10 +40,12 @@ function App() {
               <Route path="/participation" element={<Participation />} />
               <Route path="/periodicals" element={<Periodicals />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/posts" element={<Posts/>} />
+              <Route path="/postspage" element={<PostsPage/>} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/articlepage/:id" element={<ArticlePage />} />
-              <Route path="/CreateNews" element={<CreateNews />} />
+              <Route path="/postpage/:id" element={<PostPage />} />
+              <Route path="/createnews" element={<CreateNews />} />
+              <Route path="/createpost" element={<CreatePost />} />
             </Routes>
           </div>
           <Contacts />

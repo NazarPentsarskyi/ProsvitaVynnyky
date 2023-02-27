@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const ArticleModel = require('./models/Articles');
+const ArticleModel = require('./models/Article');
+const PostModel = require('./models/Post');
 const cors = require('cors');
 
 app.use(express.json());
@@ -15,6 +16,7 @@ mongoose
 .then((res) => console.log('Connected to DB'))
 .catch((error) => console.log(error));
 
+//articles
 app.get('/getArticles', async (req, res) => {
   res.json(
     await ArticleModel.find()
@@ -31,9 +33,32 @@ app.get('/articlepage/:id', async (req, res) => {
 
 app.post('/createArticle', async (req, res) => {
   const {title, description, content} = req.body;
-  const postDoc = await ArticleModel.create({
+  const articleDoc = await ArticleModel.create({
     title,
     description,
+    content,})
+  res.json(articleDoc);
+});
+
+//posts
+app.get('/getPosts', async (req, res) => {
+  res.json(
+    await PostModel.find()
+      .sort({createdAt: -1})
+      .limit(10)
+  );
+});
+
+app.get('/postpage/:id', async (req, res) => {
+  const {id} = req.params;
+  const postDoc = await PostModel.findById(id);
+  res.json(postDoc);
+})
+
+app.post('/createPost', async (req, res) => {
+  const {title, content} = req.body;
+  const postDoc = await PostModel.create({
+    title,
     content,})
   res.json(postDoc);
 });

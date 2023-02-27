@@ -1,8 +1,8 @@
 import React from 'react';
-import { Articles } from "./Articles";
+import { ArticlesMap } from "./ArticlesMap";
 import { useEffect, useState } from "react";
 import Axios from 'axios';
-import { Pagination } from './Pagination.js';
+import { Pagination } from '../../general/Pagination.js';
 
 export const NewsPage = () => {
 
@@ -27,7 +27,7 @@ export const NewsPage = () => {
 
   return (
     <div>
-      <Articles articles={currentArticles} />
+      <ArticlesMap articles={currentArticles} />
       <Pagination
         articlesPerPage={articlesPerPage}
         totalArticles={articles.length}

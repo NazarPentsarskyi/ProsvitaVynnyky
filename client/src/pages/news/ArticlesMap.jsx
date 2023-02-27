@@ -1,7 +1,7 @@
 import React from 'react';
-import { News } from "./news";
+import { News } from "./News";
 
-export const Articles = ({articles}) => {
+export const ArticlesMap = ({articles}) => {
   return (
     <div className='news'>
       {articles.length > 0 && articles.map(article => (
