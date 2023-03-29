@@ -1,0 +1,8 @@
+.contacts {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid yellow;
+}

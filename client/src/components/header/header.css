@@ -1,0 +1,10 @@
+.header{
+  grid-column: 1 / span 4;
+  grid-row: 1;
+}
+
+.header img {
+  width: 75%;
+  display: block;
+  margin: 0 auto;    
+}

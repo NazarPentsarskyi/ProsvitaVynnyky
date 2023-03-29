@@ -1,0 +1,28 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  width: 1040px;
+  margin-top: 10px;
+  padding: 0 12px 0 0;
+}
+
+.pagination li {
+  list-style: none;
+}
+
+.page-button {
+  width: 100px;
+	border: 5px solid transparent;
+	border-radius: 5px;
+	font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.page-button:hover {
+	background-color: darkgrey;
+	color: white;
+  cursor: pointer;
+}

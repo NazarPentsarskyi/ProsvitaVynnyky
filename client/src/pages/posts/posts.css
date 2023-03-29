@@ -1,0 +1,38 @@
+.posts_map {
+  display: grid;
+  grid-template-columns: 510px 510px;
+  gap: 10px;
+}
+
+.post_one {
+  border: 1px solid lightblue;
+  width: 510px;
+  height: 500px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.post_one-item {
+  height: 410px;
+  overflow: hidden;
+  line-height: 1.5;	
+}
+
+.post_one-item a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.post_one-item a:hover {
+  color: darkgrey;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.post {
+  border: 1px solid lightblue;
+  width: 1032px;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: justify;
+}
