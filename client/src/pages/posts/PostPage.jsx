@@ -21,7 +21,7 @@ export const PostPage = () => {
 
   return (
     <div>
-      <Link to={`/postspage`}><button className="post-button">... назад</button></Link>
+      <Link to={`/postspage`}><button className="button">... назад</button></Link>
       <div className="post">
         <h1>{postInfo.title}</h1>
         <time>{formatISO9075(new Date(postInfo.createdAt))}</time>

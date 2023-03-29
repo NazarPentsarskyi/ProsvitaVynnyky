@@ -3,7 +3,7 @@ import { Posts } from "./Posts";
 
 export const PostsMap = ({posts}) => {
   return (
-    <div className='news'>
+    <div className='posts_map'>
       {posts.length > 0 && posts.map(post => (
         <div key={post._id}>
           <Posts {...post}/>

@@ -1,4 +1,5 @@
 import React from 'react';
+import './posts.css';
 import { PostsMap } from "./PostsMap";
 import { useEffect, useState } from "react";
 import Axios from 'axios';
