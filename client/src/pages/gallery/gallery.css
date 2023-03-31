@@ -72,6 +72,7 @@
 
 .model.open svg {
   position: fixed;
+  top: auto;
   width: 2rem;
   height: 2rem;
   padding: 5px;
@@ -81,11 +82,9 @@
 }
 
 .model.open .prevIcon {
-  top: auto;
   left: 20px;
 }
 
 .model.open .nextIcon {
-  top: auto;
   right: 20px;
 }
