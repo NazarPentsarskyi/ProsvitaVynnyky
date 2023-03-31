@@ -1,7 +1,9 @@
 .history {
+  display: grid;
+  grid-template-columns: 1020px;
   text-align: justify;
-  padding: 0 10px 0 0;
 }
 p {
   text-indent: 20px;
+  margin: 0;
 }
