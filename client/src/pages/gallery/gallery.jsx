@@ -5,6 +5,7 @@ import './gallery.css';
 import img21 from './img/img21.jpg';
 import img22 from './img/img22.jpg';
 import img23 from './img/img23.jpg';
+import img24 from './img/img24.jpg';
 
 
 export const Gallery = () => {
@@ -22,6 +23,10 @@ export const Gallery = () => {
       id: 23,
       imgSrc: img23,
     },
+    {
+      id: 23,
+      imgSrc: img24,
+    }
   ]
 
   const [model, setModel] = useState(false);
@@ -41,7 +46,7 @@ export const Gallery = () => {
     <div className='gallery__content'>
       {dataCollection.map((item, index) => (
         <div className='gallery__item' key={index} onClick={() => getImg(item.imgSrc)}>
-          <img src={item.imgSrc} alt='' style={{width: '100%'}} />
+          <img src={item.imgSrc} alt='' style={{width: '100%', height: '360px'}} />
         </div>
         )
       )}
