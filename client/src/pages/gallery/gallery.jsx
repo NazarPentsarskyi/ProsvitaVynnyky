@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import CloseIcon from '@mui/icons-material/Close';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './gallery.css';
 
 import img21 from './img/img21.jpg';
@@ -41,7 +43,9 @@ export const Gallery = () => {
     <h2>Фотогалерея</h2>
     <div className={model ? 'model open' : 'model'}>
       <img src={tempImgSrc} alt=''/>
-      <CloseIcon onClick={() => setModel(false)} />
+      <ArrowBackIosNewIcon className='prevIcon'/>
+      <CloseIcon className='closeIcon' onClick={() => setModel(false)} />
+      <ArrowForwardIosIcon className='nextIcon'/>
     </div>
     <div className='gallery__content'>
       {dataCollection.map((item, index) => (

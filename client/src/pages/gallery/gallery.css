@@ -58,7 +58,7 @@
   margin: 0 auto;
 }
 
-.model.open svg {
+.model.open .closeIcon {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -68,4 +68,24 @@
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   cursor: pointer;
+}
+
+.model.open svg {
+  position: fixed;
+  width: 2rem;
+  height: 2rem;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  cursor: pointer;
+}
+
+.model.open .prevIcon {
+  top: auto;
+  left: 20px;
+}
+
+.model.open .nextIcon {
+  top: auto;
+  right: 20px;
 }
