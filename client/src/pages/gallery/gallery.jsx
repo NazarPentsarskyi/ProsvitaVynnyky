@@ -1,5 +1,7 @@
 import React from 'react';
-import { GalleryContent } from './galleryContent';
+import { useState } from "react";
+import { GalleryMap } from './galleryMap';
+import { Pagination } from '../../general/Pagination.js';
 
 
 export const Gallery = () => {
@@ -87,9 +89,23 @@ export const Gallery = () => {
     },
   ]
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [imagesPerPage] = useState(6);
+
+  const indexOfLastArticle = currentPage * imagesPerPage;
+  const indexOfFirstArticle = indexOfLastArticle - imagesPerPage;
+  const currentImages = dataCollection.slice(indexOfFirstArticle, indexOfLastArticle);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
     <div>
-      <GalleryContent dataCollection={dataCollection} />
+      <GalleryMap dataCollection={currentImages} />
+      <Pagination
+      articlesPerPage={imagesPerPage}
+      totalArticles={dataCollection.length}
+      paginate={paginate}
+    />
     </div>
   )
 }
