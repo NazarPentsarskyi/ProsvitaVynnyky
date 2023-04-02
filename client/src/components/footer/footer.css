@@ -4,7 +4,8 @@
   border: 1px solid greenyellow;
   padding: 10px 10px 0 10px;
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between; 
+  padding: 10px; 
 }
 
 .footer a {
