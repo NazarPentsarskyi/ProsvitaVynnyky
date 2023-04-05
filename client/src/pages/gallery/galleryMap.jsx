@@ -4,7 +4,7 @@ import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import './gallery.css';
 
-export const GalleryMap = ({dataCollection}) => {
+export const GalleryMap = ({photoCollection}) => {
 
   const [slideNumber, setSlideNumber] = useState(0);
   const [openModal, setOpenModal] = useState(false);
@@ -20,12 +20,12 @@ export const GalleryMap = ({dataCollection}) => {
 
   const prevSlide = () => {
     slideNumber === 0 
-    ? setSlideNumber( dataCollection.length -1 ) 
+    ? setSlideNumber( photoCollection.length -1 ) 
     : setSlideNumber( slideNumber - 1 )
   }
   
   const nextSlide = () => {
-    slideNumber + 1 === dataCollection.length 
+    slideNumber + 1 === photoCollection.length 
     ? setSlideNumber(0) 
     : setSlideNumber(slideNumber + 1)
   }
@@ -36,11 +36,11 @@ export const GalleryMap = ({dataCollection}) => {
     <div className={openModal ? 'model open' : 'model'}>
       <CloseIcon className='closeIcon' onClick={handleCloseModal} />
       <ArrowBackIosNewIcon className='prevIcon' onClick={prevSlide} />
-      <img src={dataCollection[slideNumber].imgSrc} alt='' />
+      <img src={photoCollection[slideNumber].imgSrc} alt='' />
       <ArrowForwardIosIcon className='nextIcon' onClick={nextSlide} />
     </div>
     <div className='gallery__content'>
-      {dataCollection && dataCollection.map((slide, index) => (
+      {photoCollection && photoCollection.map((slide, index) => (
         <div className='gallery__item' key={index} onClick={ () => handleOpenModal(index)}>
           <img src={slide.imgSrc} alt='' style={{width: '100%', height: '360px'}} />
         </div>
