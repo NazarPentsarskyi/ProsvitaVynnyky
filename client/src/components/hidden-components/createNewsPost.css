@@ -20,7 +20,22 @@
 	border: 1px solid gray;
 	border-radius: 5px;
 	font-size: 16px;
-  height: 70px;
+}
+
+.form input {
+  padding: 5px;
+  margin-bottom: 15px;
+	border: 1px solid gray;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+.form label {
+  padding: 5px 5px 5px 15px;
+  margin: 10px 0;
+	font-size: 18px;
+  text-align: center;
+  font-style: italic;
 }
 
 .quill {

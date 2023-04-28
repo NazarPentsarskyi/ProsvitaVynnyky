@@ -34,11 +34,22 @@ export const CreatePost = () => {
   return (
     <form onSubmit={createPost}>
       <div className='form'>
+      <label for='title'>Title of the post</label>
         <textarea type='text' 
-          placeholder='Title...' 
+          id='title' 
+          placeholder='Title...'
+          value=''
+          rows='4'
+          name='title'
           onChange={(event) => {setTitle(event.target.value)}}
         />
-        <Editor className='quill' value={content} onChange={setContent} />
+        <label for='postImg'>Image for the article</label>
+        <input type='file'
+          id='postImg'
+          name='postImg'
+        />
+        <label for='postText'>Text of the post</label>
+        <Editor className='quill' id='postText' name='postText' value={content} onChange={setContent} />
         <button onClick={createPost}>Create Post</button>
       </div>
     </form>

@@ -1,3 +1,11 @@
+.periodicals {
+  display: grid;
+  grid-column: 3;
+  grid-row: 2;
+  gap: 20px;
+  justify-content: center;
+}
+
 .periodicals img {
   width: 300px;
   border: 1px solid black;

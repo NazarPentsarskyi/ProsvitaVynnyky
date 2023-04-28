@@ -9,6 +9,10 @@ const ArticleSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  image: {
+    data: Buffer,
+    contentType: String
+  },
   content: {
     type: String,
     require: true,

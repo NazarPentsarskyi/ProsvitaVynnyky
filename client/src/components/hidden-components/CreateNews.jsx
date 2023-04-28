@@ -35,17 +35,33 @@ export const CreateNews = () => {
   }
   
   return (
-    <form onSubmit={createArticle}>
+    <form onSubmit={createArticle} enctype="multipart/form-data">
       <div className='form'>
-        <textarea type='text' 
-          placeholder='Title...' 
+        <label for='title'>Title of the article</label>
+        <textarea type='text'
+          id='title' 
+          placeholder='Title...'
+          value=''
+          rows='4'
+          name='title'
           onChange={(event) => {setTitle(event.target.value)}}
         />
-        <textarea type='text' 
+        <label for='description'>Article description</label>
+        <textarea type='text'
+          id='description'
           placeholder='Description...'
+          value=''
+          rows='8'
+          name='description'
           onChange={(event) => {setDescription(event.target.value)}}
         />
-        <Editor className='quill' value={content} onChange={setContent} />
+        <label for='articleImg'>Image for the article</label>
+        <input type='file'
+          id='articleImg'
+          name='articleImg'
+        />
+        <label for='articleText'>Text of the article</label>
+        <Editor className='quill' id='articleText' name='articleText' value={content} onChange={setContent} />
         <button onClick={createArticle}>Create News</button>
       </div>
     </form>
