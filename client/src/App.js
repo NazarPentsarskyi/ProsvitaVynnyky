@@ -20,6 +20,7 @@ import { CreateNews } from './components/hidden-components/CreateNews';
 import { CreatePost } from './components/hidden-components/CreatePost';
 import { Contacts } from "./components/contacts/contacts";
 import { Footer } from "./components/footer/footer";
+import { ErrorPage } from './components/ErrorPage/ErroePage';
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
               <Route path="/postpage/:id" element={<PostPage />} />
               <Route path="/createnews" element={<CreateNews />} />
               <Route path="/createpost" element={<CreatePost />} />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </div>
           <Contacts />

@@ -1,0 +1,9 @@
+.error {
+  display: grid;
+  width: 1020px;
+  margin: 0 auto;
+  padding-left: 20px;
+  justify-items: center;
+  
+}
+
