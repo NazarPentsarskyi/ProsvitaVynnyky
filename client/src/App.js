@@ -20,7 +20,7 @@ import { CreateNews } from './components/hidden-components/CreateNews';
 import { CreatePost } from './components/hidden-components/CreatePost';
 import { Contacts } from "./components/contacts/contacts";
 import { Footer } from "./components/footer/footer";
-import { ErrorPage } from './components/ErrorPage/ErroePage';
+import { ErrorPage } from './components/ErrorPage/ErrorPage';
 
 function App() {
   return (
